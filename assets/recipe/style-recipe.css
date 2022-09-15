@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --brandColorMain: #058457;
+    --brandColorSec: #12B37A;
+    --brandColorThird: #005A3A;
+    --brandColorFourth: #001D13;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--brandColorFourth);
+}
+
+.main-c {
+    width: 400px;
+    background-color: var(--brandColorMain);
+    overflow: hidden;
+    box-shadow: 0 0 10px 2px #001D13;
+    border-radius: 3px;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header input {
+    border-radius: 7px;
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--brandColorSec);
+}
+
+header button {
+    padding: 0.5rem;
+    margin-left: 0.2rem;
+    font-size: 1rem;
+    background-color: #12B37A;
+    border: none;
+    border-radius: 10px;
+}
+
+header input:focus {
+    outline: none;
+    background-color: var(--brandColorThird);
+}
+
+.fav-c {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--brandColorSec);
+}
+
+.fav-c h3 {
+    padding: 1%;
+}
+
+.fav-meals {
+    display: grid;
+    grid-auto-flow: column;
+    list-style-type: none;
+    overflow: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.fav-meals li {
+    margin: 1px;
+    position: relative;
+}
+
+.fav-meals li img {
+    border: 2px solid #005A3A;
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+    border-radius: 100%;
+    aspect-ratio: 16/9;
+}
+
+.fav-meals li span {
+    display: block;
+    padding: 1%;
+    font-size: 0.7rem;
+}
+
+.meals-c {
+    padding: 10px;
+    box-shadow: 0 0 10px 2px #001D13;
+    margin: 1.5rem;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random {
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+    width: 100%;
+    height: 250px;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.meal-body .fav-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+
+.active-fill.active {
+    fill: #001D13;
+}
+
+.btn_close {
+    width: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.meal_info_c {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+
+}
+
+.meal_info_c.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.meal_info {
+    background-color: #fff;
+    max-width: 700px;
+    width: 95%;
+    padding: 2%;
+    border-radius: 5px;
+    position: relative;
+    overflow: auto;
+}
+
+.meal_info img {
+    max-width: 300px;
+    width: 50%;
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    place-items: center;
+}
+
+.meal_info h1 {
+    text-align: center;
+}
+
+/* this is lowered on the top right compared to btn_close css */
+.meal_info .btn_close_popup {
+    width: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
